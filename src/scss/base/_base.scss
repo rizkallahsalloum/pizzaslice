@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $ff-primary;
+  color: $color-black;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #e6e9ec 100%);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+::selection {
+  background-color: $color-red;
+  color: $color-white;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-secondary;
+  text-transform: uppercase;
+}
+
+.grid-container {
+  @include display-grid;
+  grid-template-rows: 10em 45vh repeat(2, min-content);
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr) [ center-start] repeat(
+      12,
+      [col-start] minmax(min-content, 9rem) [col-end]
+    )
+    [center-end ] minmax(3rem, 1fr) [full-end];
+
+  padding: 1.6rem 0;
+  @include mq(medium) {
+    grid-template-rows: 10em 40vh repeat(2, min-content);
+  }
+  @include mq(small) {
+    grid-template-rows: 10em 50vh repeat(2, min-content);
+  }
+  @include mq(smallest) {
+    grid-template-rows: 10em 65vh repeat(2, min-content);
+  }
+}
+
+%bg-pizza {
+  background-image: url(/img/pizza-bg.svg);
+  background-repeat: repeat;
+}
+
+%full-width {
+  grid-column: full;
+  grid-template-columns: minmax(auto, 108rem);
+  justify-content: center;
+}
+// .content {
+//   @include display-grid;
+//   grid-template-columns: 1fr 1fr;
+// }

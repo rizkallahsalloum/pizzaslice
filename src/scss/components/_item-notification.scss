@@ -1,0 +1,82 @@
+@use '../abstracts' as *;
+
+.item-notification {
+  background-color: $color-green;
+  color: $color-white;
+  letter-spacing: 0.5rem;
+  position: fixed;
+  padding: 2rem;
+  bottom: 6rem;
+  right: 3rem;
+  z-index: 9999;
+  animation-name: slide-up;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    filter: blur(5px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(-50px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-50px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-50px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-50px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-30px);
+    filter: blur(1px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+    filter: blur(3px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(50px);
+    filter: blur(3px);
+    opacity: 0.5;
+  }
+  90% {
+    transform: translateY(80px);
+    filter: blur(5px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(100px);
+    filter: blur(5px);
+    opacity: 0;
+  }
+}
+
+.item-notification-active {
+  display: block;
+}

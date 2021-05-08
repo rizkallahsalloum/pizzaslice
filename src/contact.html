@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <title>Pizza Slice</title>
+    <script src="script.js" async defer></script>
+  </head>
+  <body>
+    <div class="grid-container grid-container--contact">
+      <header class="header">
+        <div class="header-top">
+          <a href="index.html">
+            <img class="header-logo" src="img/logo.svg" alt="Logo" />
+          </a>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-list-item">
+                <a class="header-nav-list-item-link" href="index.html">home</a>
+              </li>
+              <li class="header-nav-list-item">
+                <a class="header-nav-list-item-link" href="slices.html"
+                  >slices</a
+                >
+              </li>
+              <li class="header-nav-list-item">
+                <a class="header-nav-list-item-link active" href="contact.html"
+                  >contact</a
+                >
+              </li>
+              <li class="header-nav-list-item--cart">
+                <button
+                  class="header-nav-list-item-link--cart"
+                  href="#"
+                  id="cartBtn"
+                >
+                  <svg class="header-nav-list-item-link--cart-icon">
+                    <use
+                      xlink:href="img/sprite-sheet.svg#icon-pizza-slice"
+                    ></use>
+                  </svg>
+                </button>
+                <span data-cart-quantity class="cart-amount">0</span>
+                <div class="cart-items-wrapper" id="cartItems">
+                  <div data-cart-items class="cart-items"></div>
+                  <div class="cart-item-footer">
+                    <div class="cart-totals">
+                      <span class="cart-total">Total:</span>
+                      <span data-cart-total class="cart-total-amount"></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Hero -->
+
+      <section class="header-hero-content">
+        <h1 class="header-hero-content-title">
+          you make the pizza, <br />we make the slice
+        </h1>
+        <p class="header-hero-content-about">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+          in quo mollitia magnam sit totam?
+        </p>
+        <a href="slices.html" class="header-hero-btn">Have a slice!</a>
+      </section>
+      <section class="header-hero-image">
+        <img
+          class="header-hero-image-have-a-slice"
+          src="img/have-a-slice-min.png"
+          alt="have a slice"
+        />
+        <small class="slice-disclaimer">* we normally use gloves! </small>
+      </section>
+      <!-- Content -->
+
+      <main class="full-width">
+        <div class="content content--contact">
+          <div class="contact-welcome">
+            <h2 class="inside-title">let's talk</h2>
+            <h3>Don't hesitate to contact us for information</h3>
+            <p>Please do not send us messages for FREE Pizza Slices.</p>
+            <p>Please do not send us messages for FREE Pizza Slices.</p>
+            <p>Please do not send us messages for FREE Pizza Slices.</p>
+          </div>
+          <div class="contact-from">
+            <form action="" class="mb-3 mt-3">
+              <input type="text" placeholder="Full Name" />
+              <input type="email" placeholder="Email" />
+              <textarea placeholder="Your message" rows="5"></textarea>
+              <button type="submit" href="/" class="btn-form">Submit</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="footer mt-3 mb-2">
+        <small>&copy; Pizza Slice </small>
+      </footer>
+    </div>
+    <template id="cart-item-template">
+      <div data-item class="cart-item">
+        <div class="cart-item-image">
+          <img data-image />
+        </div>
+        <div class="cart-item-main">
+          <h4 data-name class="cart-item-main-name"></h4>
+          <div class="cart-item-main-quantity">
+            <span data-price class="cart-item-price"></span>
+            <span data-quantity class="cart-item-quantity"></span>
+          </div>
+        </div>
+
+        <button data-remove-from-cart-button class="btn-remove">remove</button>
+      </div>
+    </template>
+  </body>
+</html>

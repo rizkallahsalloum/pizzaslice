@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+//Sidebar
+.sidebar {
+  grid-column: center-start / col-end 3;
+
+  @include mq(medium) {
+    grid-column: center;
+  }
+  .filter-list {
+    padding: 0 3rem 0 0;
+  }
+  .filter-list-items {
+    font-weight: 600;
+  }
+  .filter-list-item {
+    margin: 1rem 0;
+    border-radius: 5rem;
+  }
+
+  .filter-list-item-link {
+    background-color: transparent;
+    color: $color-dark-black;
+    border: 1px solid lighten($color-light-gray, 15%);
+    display: block;
+    padding: 1rem;
+    line-height: 2.5;
+    border-radius: 5rem;
+    text-indent: 4rem;
+    transition: 0.3s all;
+    .filter-list-item-link-icon {
+      width: 3rem;
+      height: 3rem;
+      transform: translate(-2rem, 0.8rem);
+    }
+  }
+
+  .filter-list-item:hover,
+  .current {
+    .filter-list-item-link {
+      color: $color-white !important;
+      fill: $color-white;
+      background-color: $color-red;
+      display: block;
+    }
+  }
+}

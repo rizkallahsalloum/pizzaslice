@@ -1,0 +1,87 @@
+@use '../abstracts' as *;
+
+.cart-items-wrapper {
+  background-color: #fff;
+  border: 1px solid $color-lighter-gray;
+  color: $color-black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  width: 420px;
+  position: absolute;
+  border-radius: 3px;
+  transform: translate(-90%, 3%);
+  padding: 1rem 1.5rem;
+  animation-name: slide-bottom;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+
+  @keyframes slide-bottom {
+    0% {
+      transform: translate(-90%, -30%);
+    }
+    100% {
+      transform: translate(-90%, 3%);
+    }
+  }
+  display: none;
+  @include mq(small) {
+    width: 90vw;
+    transform: translate(-80%, 3%);
+    @keyframes slide-bottom {
+      0% {
+        transform: translate(-80%, -30%);
+      }
+      100% {
+        transform: translate(-80%, 3%);
+      }
+    }
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    align-items: center;
+  }
+  .cart-item-main-quantity {
+    font-size: 1.4rem;
+    color: $color-black;
+  }
+
+  .cart-item-quantity {
+    margin-left: 1rem;
+    font-weight: normal;
+    color: $color-gray;
+  }
+  .cart-item-image {
+    width: 7em;
+    filter: drop-shadow(1px 10px 10px #8d8d8da1);
+  }
+  .btn-remove {
+    background-color: $color-red;
+    color: $color-white;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+  }
+
+  .cart-item-footer {
+    margin: 1rem 0;
+    border-top: 1px solid $color-lighter-gray;
+
+    .cart-totals {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.cart-items-active {
+  display: block;
+}

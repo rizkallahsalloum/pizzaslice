@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.grid-container--home {
+  .full-width {
+    @extend %full-width;
+  }
+}
+.our-slices-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url(/img/our-slices-bg.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  .inside-title {
+    color: $color-white;
+    text-align: center;
+  }
+}
+.content--home-page {
+  grid-column: center;
+
+  .menu-slices {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    justify-content: space-between;
+    @include mq(small) {
+      grid-row-gap: 8rem;
+    }
+  }
+}

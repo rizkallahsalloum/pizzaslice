@@ -1,0 +1,27 @@
+@use 'sass:map';
+
+$bp: (
+  largest: 75em,
+  // 1200px
+  large: 62.5em,
+  // 1000px
+  medium: 50em,
+  // 800px;
+  small: 37.5em,
+  // 600px;
+  smallest: 23.5em,
+  // 600px;
+);
+
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin mq($key) {
+  $size: map-get($bp, $key);
+
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}

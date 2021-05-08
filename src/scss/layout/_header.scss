@@ -1,0 +1,145 @@
+@use '../abstracts' as *;
+@use '../components' as *;
+
+.header {
+  width: 100%;
+  grid-column: center-start / center-end;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(medium) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  margin-bottom: 1rem;
+  .header-logo {
+    width: 15rem;
+  }
+  .header-nav {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+    z-index: 100;
+    @include mq(medium) {
+      margin-top: 1.5rem;
+    }
+    &-list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-list-item:not(:last-child) {
+      padding: 0 10rem 0 0;
+      @include mq(small) {
+        padding: 0 5rem 0 0;
+      }
+      @include mq(smallest) {
+        padding: 0 2rem 0 0;
+      }
+    }
+    &-list-item-link {
+      color: $color-black;
+      transition: 0.3s all;
+    }
+    &-list-item-link:hover,
+    .active {
+      color: $color-red;
+    }
+    &-list-item--cart {
+      position: relative;
+      font-size: 1.5rem;
+      line-height: 2.2;
+    }
+    &-list-item-link--cart {
+      display: inline-block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      &-icon {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    .cart-amount {
+      background-color: $color-red;
+      color: $color-white;
+      position: absolute;
+      padding: 0 1rem;
+      line-height: 2;
+      text-align: center;
+      width: 2em;
+      height: 2em;
+      border-radius: 5rem;
+      transform: translate(-1rem, -1rem);
+    }
+  }
+}
+
+.header-hero {
+  &-content {
+    grid-column: center-start / col-end 6;
+    @include mq(medium) {
+      grid-column: center;
+      margin-top: 2rem;
+    }
+  }
+  &-content > * {
+    padding-bottom: 2rem;
+    padding-right: 5rem;
+  }
+  &-content-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: $ff-secondary;
+  }
+  &-content-about {
+    font-size: 1.6rem;
+  }
+  &-btn {
+    background-color: $color-red;
+    color: $color-white;
+    padding: 1.5rem 4rem;
+    font-family: $ff-secondary;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    transition: 0.3s all;
+    &:hover {
+      background-color: darken($color-red, 15%);
+    }
+  }
+  &-image {
+    grid-column: col-start 7 / full-end;
+    width: 100%;
+
+    &-have-a-slice {
+      margin-top: -10vw;
+      margin-bottom: 1rem;
+      @include mq(large) {
+        margin-top: -7vw;
+      }
+      @include mq(medium) {
+        display: none;
+      }
+    }
+    .slice-disclaimer {
+      text-transform: capitalize;
+      transform: rotate(22deg);
+      font-size: 1.2rem;
+      color: $color-black;
+      font-weight: 600;
+      display: block;
+      position: relative;
+      margin: 2.5vw 0 0 2vw;
+      @include mq(medium) {
+        display: none;
+      }
+    }
+  }
+}

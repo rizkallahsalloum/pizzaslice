@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Veggie Slice",
+    "category": "healthy",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Tomatoes, Basil, Sauce, Parmesan",
+    "priceCents": 200,
+    "image": "veggie-slice.png",
+    "bestSeller": "undefined"
+  },
+  {
+    "id": 2,
+    "name": "Italian Slice",
+    "category": "vegetarian",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Tomatoes, Basil, Sauce, Parmesan",
+    "priceCents": 220,
+    "image": "italian-slice.png",
+    "bestSeller": "bestSeller"
+  },
+  {
+    "id": 3,
+    "name": "Cheese Slice",
+    "category": "vegetarian",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Sauce, Parmesan",
+    "priceCents": 300,
+    "image": "cheese-slice.png",
+    "bestSeller": "undefined"
+  },
+  {
+    "id": 4,
+    "name": "Hawaiian Slice",
+    "category": "Meat",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Tomatoes, Pepperoni, Basil, Sauce, Parmesan",
+    "priceCents": 290,
+    "image": "hawaiian-slice.png",
+    "bestSeller": "bestSeller"
+  },
+  {
+    "id": 5,
+    "name": "Meatballs Slice",
+    "category": "Meat",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Tomatoes, Meatballs, Basil, Sauce, Parmesan",
+    "priceCents": 250,
+    "image": "meat-balls-slice.png",
+    "bestSeller": "undefined"
+  },
+  {
+    "id": 6,
+    "name": "Pepperoni Slice",
+    "category": "Meat",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Tomatoes, Pepperoni, Basil, Sauce, Parmesan",
+    "priceCents": 210,
+    "image": "pepperoni-slice.png",
+    "bestSeller": "bestSeller"
+  },
+  {
+    "id": 7,
+    "name": "Bacon Slice",
+    "category": "Meat",
+    "weight": "230G",
+    "ingredients": "Dough, Mozzarella, Tomatoes, Bacon, Basil, Sauce, Parmesan",
+    "priceCents": 300,
+    "image": "bacon-slice.png",
+    "bestSeller": "bestSeller"
+  }
+]
