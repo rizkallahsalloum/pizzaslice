@@ -113,6 +113,9 @@
     &:hover {
       background-color: darken($color-red, 15%);
     }
+    @include mq(medium) {
+      margin-bottom: 2rem;
+    }
   }
   &-image {
     grid-column: col-start 7 / full-end;

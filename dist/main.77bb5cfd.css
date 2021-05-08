@@ -635,6 +635,11 @@
 .header-hero-btn:hover {
   background-color: #d50105;
 }
+@media only screen and (max-width: 50em) {
+  .header-hero-btn {
+    margin-bottom: 2rem;
+  }
+}
 .header-hero-image {
   grid-column: col-start 7/full-end;
   width: 100%;
