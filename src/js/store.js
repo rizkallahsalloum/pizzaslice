@@ -12,10 +12,10 @@ const IMAGE_URL = "https://raw.githubusercontent.com/rizkallahsalloum/pizzaslice
 
 const itemNotificationAdded = document.querySelector('.item-notification');
 
-// const homePopularSlices = document.querySelector('#popular-slices');
 
 
-if(document.querySelector(".filter-list-items") != null && document.querySelector(".menu-slices") != null){
+
+if(document.querySelector(".filter-list-items") !== null && document.querySelector(".menu-slices") !== null){
 
 const sortBtn = document.querySelector(".filter-list-items").children;
 const sortItem = document.querySelector(".menu-slices").children;
@@ -74,7 +74,7 @@ export function setupStore(){
 
 
 function renderCardItem(item){
-  if (cardItemTemplate != null) {
+  if (cardItemTemplate !== null) {
   const cardItem = cardItemTemplate.content.cloneNode(true);
 
   const container = cardItem.querySelector("[data-card-item]")
@@ -108,16 +108,5 @@ function renderCardItem(item){
 }
 
 
-// homePopularSlices.append(JSON.stringify(result));
-
-// I want to show this on the home page
-
-// let result = items.filter(function(name) {
-
-//   return name.bestSeller;
-// });
-
-// homePopularSlices = result.join();
-// console.table(result);
 
 

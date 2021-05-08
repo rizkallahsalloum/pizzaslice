@@ -28,10 +28,7 @@ export function setupListCart(){
   listCart = loadCart()
   renderCart();
 
-  //------------ was giving an error
-  // cartBtn.addEventListener("click", () => [
-  //   cartItemsWrapper.classList.toggle("hidden")
-  // ])
+
 }
 
 
@@ -58,7 +55,7 @@ export function addToCart(id){
 
 function removeFromCart(id) {
   const existingItem = listCart.find(entry => entry.id === id)
-  if (existingItem == null) return
+  if (existingItem === null) return
   listCart = listCart.filter(entry => entry.id !== id)
   renderCart()
   saveCart()
@@ -103,7 +100,7 @@ function renderCartItems(){
   }, 0);
 
   cartTotal.innerText = formatCurrency(totalCents / 100)
-  if (cartItemTemplate != null) {
+  if (cartItemTemplate !== null) {
   cartItemContainer.innerHTML = '';
   listCart.forEach(entry => {
 

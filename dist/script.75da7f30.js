@@ -132,48 +132,51 @@ function contactForm() {
   var message = document.getElementById('message');
   var errorMessage = document.getElementById("error-message");
   var successMessage = document.getElementById("success-message");
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    checkInputs();
-  });
 
-  function checkInputs() {
-    var fullNameValue = fullName.value.trim();
-    var emailValue = email.value.trim();
-    var messageValue = message.value;
-    var text;
+  if (form !== null) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      checkInputs();
+    });
 
-    if (fullNameValue === '') {
-      text = "Please Enter your fullName";
-      errorMessage.innerHTML = text;
-      return false;
+    function checkInputs() {
+      var fullNameValue = fullName.value.trim();
+      var emailValue = email.value.trim();
+      var messageValue = message.value;
+      var text;
+
+      if (fullNameValue === '') {
+        text = "Please Enter your fullName";
+        errorMessage.innerHTML = text;
+        return false;
+      }
+
+      if (emailValue === '') {
+        text = "Email cannot be blank";
+        errorMessage.innerHTML = text;
+        return false;
+      } else if (!isEmail(emailValue)) {
+        text = "Not a valid email";
+        errorMessage.innerHTML = text;
+        return false;
+      }
+
+      if (messageValue === 'free pizza slices') {
+        text = "Seriously no Free Slices!";
+        errorMessage.innerHTML = text;
+        return false;
+      }
+
+      text = "Thank you! your message has been sent";
+      successMessage.innerHTML = text;
+      form.reset();
+      errorMessage.innerHTML = '';
+      return true;
     }
 
-    if (emailValue === '') {
-      text = "Email cannot be blank";
-      errorMessage.innerHTML = text;
-      return false;
-    } else if (!isEmail(emailValue)) {
-      text = "Not a valid email";
-      errorMessage.innerHTML = text;
-      return false;
+    function isEmail(email) {
+      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
-
-    if (messageValue === 'free pizza slices') {
-      text = "Seriously no Free Slices!";
-      errorMessage.innerHTML = text;
-      return false;
-    }
-
-    text = "Thank you! your message has been sent";
-    successMessage.innerHTML = text;
-    form.reset();
-    errorMessage.innerHTML = '';
-    return true;
-  }
-
-  function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
   }
 }
 },{}],"items.json":[function(require,module,exports) {
@@ -305,10 +308,7 @@ function setupListCart() {
     removeFromCart(id);
   });
   listCart = loadCart();
-  renderCart(); //------------ was giving an error
-  // cartBtn.addEventListener("click", () => [
-  //   cartItemsWrapper.classList.toggle("hidden")
-  // ])
+  renderCart();
 }
 
 function saveCart() {
@@ -342,7 +342,7 @@ function removeFromCart(id) {
   var existingItem = listCart.find(function (entry) {
     return entry.id === id;
   });
-  if (existingItem == null) return;
+  if (existingItem === null) return;
   listCart = listCart.filter(function (entry) {
     return entry.id !== id;
   });
@@ -386,7 +386,7 @@ function renderCartItems() {
   }, 0);
   cartTotal.innerText = (0, _formatCurrency.default)(totalCents / 100);
 
-  if (cartItemTemplate != null) {
+  if (cartItemTemplate !== null) {
     cartItemContainer.innerHTML = '';
     listCart.forEach(function (entry) {
       var item = _items.default.find(function (i) {
@@ -433,9 +433,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var cardItemContainer = document.querySelector("[data-card-container]");
 var cardItemTemplate = document.querySelector('#card-item-template');
 var IMAGE_URL = "https://raw.githubusercontent.com/rizkallahsalloum/pizzaslice/master/src/img/menu/";
-var itemNotificationAdded = document.querySelector('.item-notification'); // const homePopularSlices = document.querySelector('#popular-slices');
+var itemNotificationAdded = document.querySelector('.item-notification');
 
-if (document.querySelector(".filter-list-items") != null && document.querySelector(".menu-slices") != null) {
+if (document.querySelector(".filter-list-items") !== null && document.querySelector(".menu-slices") !== null) {
   (function () {
     var sortBtn = document.querySelector(".filter-list-items").children;
     var sortItem = document.querySelector(".menu-slices").children;
@@ -497,7 +497,7 @@ function setupStore() {
 }
 
 function renderCardItem(item) {
-  if (cardItemTemplate != null) {
+  if (cardItemTemplate !== null) {
     var cardItem = cardItemTemplate.content.cloneNode(true);
     var container = cardItem.querySelector("[data-card-item]");
     container.dataset.itemId = item.id;
@@ -515,13 +515,7 @@ function renderCardItem(item) {
     image.src = "".concat(IMAGE_URL, "/").concat(item.image);
     cardItemContainer.appendChild(cardItem);
   }
-} // homePopularSlices.append(JSON.stringify(result));
-// I want to show this on the home page
-// let result = items.filter(function(name) {
-//   return name.bestSeller;
-// });
-// homePopularSlices = result.join();
-// console.table(result);
+}
 },{"../items.json":"items.json","./listCart":"js/listCart.js","./utilities/addGlobalEventListener.js":"js/utilities/addGlobalEventListener.js","./utilities/formatCurrency.js":"js/utilities/formatCurrency.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
