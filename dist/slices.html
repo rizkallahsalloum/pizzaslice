@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.77bb5cfd.css">
+    <title>Pizza Slice</title>
+    <script src="/script.75da7f30.js" defer=""></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <div class="header-top">
+          <a href="/index.html">
+            <img class="header-logo" src="/logo.f1d8a4c6.svg" alt="Logo">
+          </a>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-list-item">
+                <a class="header-nav-list-item-link" href="/index.html">home</a>
+              </li>
+              <li class="header-nav-list-item">
+                <a class="header-nav-list-item-link active" href="/slices.html">slices</a>
+              </li>
+              <li class="header-nav-list-item">
+                <a class="header-nav-list-item-link" href="/contact.html">contact</a>
+              </li>
+              <li class="header-nav-list-item--cart">
+                <button class="header-nav-list-item-link--cart" href="#" id="cartBtn">
+                  <svg class="header-nav-list-item-link--cart-icon">
+                    <use xlink:href="/sprite-sheet.be44cbad.svg#icon-pizza-slice"></use>
+                  </svg>
+                </button>
+                <span data-cart-quantity="" class="cart-amount">0</span>
+                <div class="cart-items-wrapper hidden" id="cartItems">
+                  <div data-cart-items="" class="cart-items"></div>
+                  <div class="cart-item-footer">
+                    <div class="cart-totals">
+                      <span class="cart-total">Total:</span>
+                      <span data-cart-total="" class="cart-total-amount"></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Hero -->
+
+      <section class="header-hero-content">
+        <h1 class="header-hero-content-title">
+          you make the pizza, <br>we make the slice
+        </h1>
+        <p class="header-hero-content-about">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+          in quo mollitia magnam sit totam?
+        </p>
+        <a href="#" class="header-hero-btn">Have a slice!</a>
+      </section>
+      <section class="header-hero-image">
+        <img class="header-hero-image-have-a-slice" src="/have-a-slice-min.5bbbe43c.png" alt="have a slice">
+        <small class="slice-disclaimer">* we normally use gloves! </small>
+      </section>
+
+      <!-- Content -->
+      <aside class="sidebar">
+        <div class="filter-list">
+          <ul class="filter-list-items">
+            <li class="filter-list-item" data-target="all">
+              <a class="filter-list-item-link" href="#!">
+                <svg class="filter-list-item-link-icon">
+                  <use xlink:href="/sprite-sheet.be44cbad.svg#icon-pizza-slice-all"></use></svg>All</a>
+            </li>
+            <li class="filter-list-item" data-target="vegetarian">
+              <a class="filter-list-item-link" href="#!">
+                <svg class="filter-list-item-link-icon">
+                  <use xlink:href="/sprite-sheet.be44cbad.svg#icon-vegan"></use></svg>Vegetarian</a>
+            </li>
+            <li class="filter-list-item" data-target="healthy">
+              <a class="filter-list-item-link" href="#!">
+                <svg class="filter-list-item-link-icon">
+                  <use xlink:href="/sprite-sheet.be44cbad.svg#icon-healthy"></use></svg>Healthy</a>
+            </li>
+            <li class="filter-list-item" data-target="meat">
+              <a class="filter-list-item-link" href="#!">
+                <svg class="filter-list-item-link-icon">
+                  <use xlink:href="/sprite-sheet.be44cbad.svg#icon-meat"></use></svg>Meat</a>
+            </li>
+            <li class="filter-list-item" data-target="bestSeller">
+              <a class="filter-list-item-link" href="#!">
+                <svg class="filter-list-item-link-icon">
+                  <use xlink:href="/sprite-sheet.be44cbad.svg#icon-best-seller"></use></svg>Best Seller</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="item-notification">
+        <h4>Item added to Cart!</h4>
+      </div>
+      <main class="content content--slices">
+        <div data-card-container="" class="menu-slices mb-3"></div>
+      </main>
+      <template id="cart-item-template">
+        <div data-item="" class="cart-item">
+          <div class="cart-item-image">
+            <img data-image="">
+          </div>
+          <div class="cart-item-main">
+            <h4 data-name="" class="cart-item-main-name"></h4>
+            <div class="cart-item-main-quantity">
+              <span data-price="" class="cart-item-price"></span>
+              <span data-quantity="" class="cart-item-quantity"></span>
+            </div>
+          </div>
+
+          <button data-remove-from-cart-button="" class="btn-remove">
+            remove
+          </button>
+        </div>
+      </template>
+      <template id="card-item-template">
+        <div data-card-item="" class="menu-slice-item">
+          <figure class="menu-slice-img">
+            <img data-image="">
+          </figure>
+          <h4 data-name="" class="menu-slice-title"></h4>
+
+          <div data-ingredients="" class="menu-slice-ingredients"></div>
+          <div data-best-seller="" class="menu-slice-best-seller"></div>
+          <div class="menu-slice-type-weight">
+            <span data-weight="" class="menu-slice-weight"> </span>
+            <span data-category="" class="menu-slice-type"> </span>
+          </div>
+          <div class="menu-slice-info">
+            <strong data-price="" class="menu-slice-price"></strong>
+            <button data-add-to-cart-button="" class="menu-slice-add-to-cart" id="cardAddButton">
+              +
+            </button>
+          </div>
+        </div>
+      </template>
+      <!-- Footer -->
+      <footer class="footer mt-3 mb-2">
+        <small>&copy; Pizza Slice </small>
+      </footer>
+    </div>
+  </body>
+</html>
