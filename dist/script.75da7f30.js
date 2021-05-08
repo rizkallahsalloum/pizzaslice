@@ -117,7 +117,66 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"items.json":[function(require,module,exports) {
+})({"js/contactForm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.contactForm = contactForm;
+
+function contactForm() {
+  var form = document.getElementById('form');
+  var fullName = document.getElementById('full-name');
+  var email = document.getElementById('email');
+  var message = document.getElementById('message');
+  var errorMessage = document.getElementById("error-message");
+  var successMessage = document.getElementById("success-message");
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    checkInputs();
+  });
+
+  function checkInputs() {
+    var fullNameValue = fullName.value.trim();
+    var emailValue = email.value.trim();
+    var messageValue = message.value;
+    var text;
+
+    if (fullNameValue === '') {
+      text = "Please Enter your fullName";
+      errorMessage.innerHTML = text;
+      return false;
+    }
+
+    if (emailValue === '') {
+      text = "Email cannot be blank";
+      errorMessage.innerHTML = text;
+      return false;
+    } else if (!isEmail(emailValue)) {
+      text = "Not a valid email";
+      errorMessage.innerHTML = text;
+      return false;
+    }
+
+    if (messageValue === 'free pizza slices') {
+      text = "Seriously no Free Slices!";
+      errorMessage.innerHTML = text;
+      return false;
+    }
+
+    text = "Thank you! your message has been sent";
+    successMessage.innerHTML = text;
+    form.reset();
+    errorMessage.innerHTML = '';
+    return true;
+  }
+
+  function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  }
+}
+},{}],"items.json":[function(require,module,exports) {
 module.exports = [{
   "id": 1,
   "name": "Veggie Slice",
@@ -466,14 +525,17 @@ function renderCardItem(item) {
 },{"../items.json":"items.json","./listCart":"js/listCart.js","./utilities/addGlobalEventListener.js":"js/utilities/addGlobalEventListener.js","./utilities/formatCurrency.js":"js/utilities/formatCurrency.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
+var _contactForm = require("./js/contactForm.js");
+
 var _listCart = require("./js/listCart.js");
 
 var _store = require("./js/store.js");
 
 (0, _store.setupStore)();
 (0, _listCart.setupListCart)();
+(0, _contactForm.contactForm)();
 (0, _listCart.handleClickCart)();
-},{"./js/listCart.js":"js/listCart.js","./js/store.js":"js/store.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./js/contactForm.js":"js/contactForm.js","./js/listCart.js":"js/listCart.js","./js/store.js":"js/store.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -501,7 +563,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56695" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54431" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

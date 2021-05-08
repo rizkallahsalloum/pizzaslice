@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
     <title>Pizza Slice</title>
-    <script src="script.js" async defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="grid-container grid-container--contact">
@@ -87,10 +87,16 @@
             <p>Please do not send us messages for FREE Pizza Slices.</p>
           </div>
           <div class="contact-from">
-            <form action="" class="mb-3 mt-3">
-              <input type="text" placeholder="Full Name" />
-              <input type="email" placeholder="Email" />
-              <textarea placeholder="Your message" rows="5"></textarea>
+            <form action="" class="mb-3 mt-3" id="form">
+              <div class="error-message" id="error-message"></div>
+              <div class="success-message" id="success-message"></div>
+              <input type="text" placeholder="Full Name" id="full-name" />
+              <input type="email" placeholder="Email" id="email" />
+              <textarea
+                placeholder="Your message"
+                rows="5"
+                id="message"
+              ></textarea>
               <button type="submit" href="/" class="btn-form">Submit</button>
             </form>
           </div>
