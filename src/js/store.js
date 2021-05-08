@@ -8,7 +8,7 @@ const cardItemContainer = document.querySelector("[data-card-container]");
 const cardItemTemplate = document.querySelector('#card-item-template');
 
 
-const IMAGE_URL = "https://raw.githubusercontent.com/rizkallahsalloum/pizzaslice/main/src/img/menu/";
+const IMAGE_URL = "https://raw.githubusercontent.com/rizkallahsalloum/pizzaslice/master/src/img/menu/";
 
 const itemNotificationAdded = document.querySelector('.item-notification');
 

@@ -5,7 +5,7 @@ import formatCurrency from './utilities/formatCurrency.js';
 
 
 let listCart = [];
-const IMAGE_URL = "https://raw.githubusercontent.com/rizkallahsalloum/pizzaslice/main/src/img/menu/";
+const IMAGE_URL = "https://raw.githubusercontent.com/rizkallahsalloum/pizzaslice/master/src/img/menu/";
 
 const cartItemTemplate = document.querySelector('#cart-item-template');
 
