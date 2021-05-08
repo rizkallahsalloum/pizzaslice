@@ -13,6 +13,9 @@
     background-size: cover;
     background-position: center 70%;
     color: $color-white;
+    @include mq(small) {
+      margin-top: 8rem !important;
+    }
   }
 }
 .content--contact {
@@ -21,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   grid-gap: 3rem;
+
   @include mq(medium) {
     grid-template-columns: 1fr;
   }

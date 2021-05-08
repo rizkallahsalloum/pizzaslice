@@ -4,7 +4,9 @@
 //Sidebar
 .sidebar {
   grid-column: center-start / col-end 3;
-
+  @include mq(small) {
+    margin-top: 8rem !important;
+  }
   @include mq(medium) {
     grid-column: center;
   }

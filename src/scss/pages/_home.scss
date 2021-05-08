@@ -17,6 +17,10 @@
   align-items: center;
   justify-content: center;
   height: 40vh;
+
+  @include mq(small) {
+    margin-top: 8rem;
+  }
   .inside-title {
     color: $color-white;
     text-align: center;

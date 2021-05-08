@@ -552,7 +552,7 @@
     padding: 0 5rem 0 0;
   }
 }
-@media only screen and (max-width: 23.5em) {
+@media only screen and (max-width: 23em) {
   .header .header-nav-list-item:not(:last-child) {
     padding: 0 2rem 0 0;
   }
@@ -634,11 +634,6 @@
 }
 .header-hero-btn:hover {
   background-color: #d50105;
-}
-@media only screen and (max-width: 50em) {
-  .header-hero-btn {
-    margin-bottom: 2rem;
-  }
 }
 .header-hero-image {
   grid-column: col-start 7/full-end;
@@ -756,7 +751,7 @@ h6 {
     grid-template-rows: 10em 50vh repeat(2, min-content);
   }
 }
-@media only screen and (max-width: 23.5em) {
+@media only screen and (max-width: 23em) {
   .grid-container {
     grid-template-rows: 10em 65vh repeat(2, -webkit-min-content);
     grid-template-rows: 10em 65vh repeat(2, min-content);
@@ -773,6 +768,11 @@ h6 {
 
 .sidebar {
   grid-column: center-start/col-end 3;
+}
+@media only screen and (max-width: 37.5em) {
+  .sidebar {
+    margin-top: 8rem !important;
+  }
 }
 @media only screen and (max-width: 50em) {
   .sidebar {
@@ -840,6 +840,11 @@ h6 {
           justify-content: center;
   height: 40vh;
 }
+@media only screen and (max-width: 37.5em) {
+  .our-slices-bg {
+    margin-top: 8rem;
+  }
+}
 .our-slices-bg .inside-title {
   color: #fff;
   text-align: center;
@@ -892,6 +897,11 @@ h6 {
   background-size: cover;
   background-position: center 70%;
   color: #fff;
+}
+@media only screen and (max-width: 37.5em) {
+  .grid-container--contact .full-width {
+    margin-top: 8rem !important;
+  }
 }
 
 .content--contact {

@@ -82,6 +82,7 @@
 .header-hero {
   &-content {
     grid-column: center-start / col-end 6;
+
     @include mq(medium) {
       grid-column: center;
       margin-top: 2rem;
@@ -110,11 +111,9 @@
     font-weight: 600;
     border-radius: 3rem;
     transition: 0.3s all;
+
     &:hover {
       background-color: darken($color-red, 15%);
-    }
-    @include mq(medium) {
-      margin-bottom: 2rem;
     }
   }
   &-image {
