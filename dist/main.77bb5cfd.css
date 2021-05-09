@@ -598,9 +598,9 @@
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .header .header-nav .cart-amount {
-    -webkit-transform: translate(1rem, -3rem);
-        -ms-transform: translate(1rem, -3rem);
-            transform: translate(1rem, -3rem);
+    -webkit-transform: translate(3rem, -6rem);
+        -ms-transform: translate(3rem, -6rem);
+            transform: translate(3rem, -6rem);
   }
 }
 
