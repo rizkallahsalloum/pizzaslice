@@ -34,11 +34,11 @@
     }
     &-list-item:not(:last-child) {
       padding: 0 10rem 0 0;
-      @include mq(small) {
+      @include mq(medium) {
         padding: 0 5rem 0 0;
       }
-      @include mq(smallest) {
-        padding: 0 2rem 0 0;
+      @include mq(small) {
+        padding: 0 3rem 0 0;
       }
     }
     &-list-item-link {

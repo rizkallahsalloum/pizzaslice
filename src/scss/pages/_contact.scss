@@ -14,7 +14,7 @@
     background-position: center 70%;
     color: $color-white;
     @include mq(small) {
-      margin-top: 8rem !important;
+      margin-top: 10rem !important;
     }
   }
 }
@@ -51,6 +51,9 @@
 
       grid-row-gap: 2rem;
       padding: 2rem;
+      @include mq(small) {
+        padding: 0;
+      }
       input,
       textarea {
         border: none;
@@ -65,6 +68,9 @@
         border-radius: 1rem;
         background: linear-gradient(#fff 0%, #f8f8f8 100%);
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+        @include mq(small) {
+          width: 25em;
+        }
       }
       textarea {
         padding: 2rem;

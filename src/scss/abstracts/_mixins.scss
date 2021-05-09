@@ -9,7 +9,7 @@ $bp: (
   // 800px;
   small: 37.5em,
   // 600px;
-  smallest: 23em,
+  mini: 23em,
   // 376px;
 );
 
@@ -20,7 +20,6 @@ $bp: (
 
 @mixin mq($key) {
   $size: map-get($bp, $key);
-
   @media only screen and (max-width: $size) {
     @content;
   }

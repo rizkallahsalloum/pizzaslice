@@ -547,14 +547,14 @@
 .header .header-nav-list-item:not(:last-child) {
   padding: 0 10rem 0 0;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 50em) {
   .header .header-nav-list-item:not(:last-child) {
     padding: 0 5rem 0 0;
   }
 }
-@media only screen and (max-width: 23em) {
+@media only screen and (max-width: 37.5em) {
   .header .header-nav-list-item:not(:last-child) {
-    padding: 0 2rem 0 0;
+    padding: 0 3rem 0 0;
   }
 }
 .header .header-nav-list-item-link {
@@ -900,7 +900,7 @@ h6 {
 }
 @media only screen and (max-width: 37.5em) {
   .grid-container--contact .full-width {
-    margin-top: 8rem !important;
+    margin-top: 10rem !important;
   }
 }
 
@@ -947,6 +947,11 @@ h6 {
   grid-row-gap: 2rem;
   padding: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .content--contact .contact-from form {
+    padding: 0;
+  }
+}
 .content--contact .contact-from form input,
 .content--contact .contact-from form textarea {
   border: none;
@@ -965,6 +970,11 @@ h6 {
   background: linear-gradient(#fff 0%, #f8f8f8 100%);
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+@media only screen and (max-width: 37.5em) {
+  .content--contact .contact-from form input {
+    width: 25em;
+  }
 }
 .content--contact .contact-from form textarea {
   padding: 2rem;

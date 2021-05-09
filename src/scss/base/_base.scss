@@ -62,7 +62,7 @@ h6 {
   @include mq(small) {
     grid-template-rows: 10em 50vh repeat(2, min-content);
   }
-  @include mq(smallest) {
+  @include mq(mini) {
     grid-template-rows: 10em 65vh repeat(2, min-content);
   }
 }
