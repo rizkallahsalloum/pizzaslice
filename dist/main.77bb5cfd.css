@@ -596,6 +596,13 @@
       -ms-transform: translate(-1rem, -1rem);
           transform: translate(-1rem, -1rem);
 }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .header .header-nav .cart-amount {
+    -webkit-transform: translate(1rem, -3rem);
+        -ms-transform: translate(1rem, -3rem);
+            transform: translate(1rem, -3rem);
+  }
+}
 
 .header-hero-content {
   grid-column: center-start/col-end 6;
