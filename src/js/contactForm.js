@@ -18,7 +18,7 @@ if (form !== null) {
    function checkInputs(){
     const fullNameValue = fullName.value.trim();
     const emailValue = email.value.trim();
-    const messageValue = message.value;
+    const messageValue = message.value.toLowerCase();
     let text;
     if(fullNameValue === ''){
       text = "Please Enter your fullName";
@@ -34,7 +34,7 @@ if (form !== null) {
       errorMessage.innerHTML = text;
       return false;
    }
-   if(messageValue === 'free pizza slices'){
+   if(messageValue === 'free pizza slices' ){
     text = "Seriously no Free Slices!";
     errorMessage.innerHTML = text;
     return false;

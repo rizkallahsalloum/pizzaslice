@@ -142,7 +142,7 @@ function contactForm() {
     function checkInputs() {
       var fullNameValue = fullName.value.trim();
       var emailValue = email.value.trim();
-      var messageValue = message.value;
+      var messageValue = message.value.toLowerCase();
       var text;
 
       if (fullNameValue === '') {
