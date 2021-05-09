@@ -554,7 +554,7 @@
 }
 @media only screen and (max-width: 37.5em) {
   .header .header-nav-list-item:not(:last-child) {
-    padding: 0 3rem 0 0;
+    padding: 0 2rem 0 0;
   }
 }
 .header .header-nav-list-item-link {
